@@ -330,4 +330,5 @@ Saldo tidak cukup
 - Satu soal tidak dipecah ke beberapa sel, dan dua soal tidak digabung dalam satu sel.
 - Jawaban berupa program yang membaca `input()`. Nilai yang ditulis langsung ke kode tidak diterima, karena penilaian menjalankan kode dengan masukan lain.
 - Sel percobaan dan kode di luar jawaban dihapus, lalu notebook disimpan sebelum dikirim.
-- Nama berkas: `NIM_Nama_Kelas.ipynb`, misalnya `2301001_Budi_01.ipynb`.
+- Nama berkas: `NIM_Nama Lengkap.ipynb`, misalnya `6703220051_Bakti Surya Atmaja.ipynb`.
+- Berkas diunggah ke folder Google Drive Kelas 01: https://drive.google.com/drive/folders/1S_W7l1h9ifaCXyCS60Nw-ly2c7cXLXfN?usp=drive_link
