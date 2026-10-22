@@ -1,8 +1,13 @@
-# B6. Penilaian Lomba
+# Soal 6. Penilaian Lomba
+
+# Masukan
 kategori = input()
+
 match kategori:
     case "1":
+        # Individu
         skor = int(input())
+
         if skor < 0 or skor > 100:
             print("Skor tidak valid")
         elif skor >= 90:
@@ -11,12 +16,16 @@ match kategori:
             print("Finalis")
         else:
             print("Peserta")
+
     case "2":
+        # Tim: jumlah anggota dicek dulu sebelum skor dibaca
         anggota = int(input())
+
         if anggota < 3 or anggota > 5:
             print("Jumlah anggota harus 3 sampai 5")
         else:
             skor = int(input())
+
             if skor < 0 or skor > 100:
                 print("Skor tidak valid")
             elif skor >= 85:
@@ -28,5 +37,6 @@ match kategori:
                 print("Finalis")
             else:
                 print("Peserta")
+
     case _:
         print("Kategori tidak dikenal")
