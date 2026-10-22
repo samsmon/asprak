@@ -17,26 +17,36 @@ Skor rubrik (0 sampai 100) diubah ke poin soal dengan rumus: poin soal = skor ru
 
 | Tingkat | Soal | Bobot |
 |---|---|---|
-| Mudah | 1, 2 | 25 |
+| Mudah | 1, 2 | 15 |
 | Sedang | 3, 4 | 30 |
-| Susah | 5, 6 | 35 |
+| Susah | 5, 6 | 40 |
 
-Nilai akhir = jumlah poin semua soal, paling tinggi 100. Nilai aman adalah 75 ke atas.
+Soal dihitung selesai bila skor rubriknya minimal 70. Misalkan P adalah jumlah poin semua soal.
 
-Kombinasi soal yang benar penuh:
+1. Jumlah soal selesai 3 atau lebih: nilai akhir = min(100, max(P, 75)). Nilai aman (75 ke atas) terjamin.
+2. Jumlah soal selesai 2 atau kurang: nilai akhir = min(P, 74).
+3. Bobot tingkat tetap menentukan nilai di antara batas itu: soal Susah menyumbang poin paling besar.
 
-| Soal yang benar | Poin |
-|---|---|
-| 2 soal Mudah | 50 |
-| Mudah + Sedang | 55 |
-| Mudah + Susah | 60 |
-| 2 soal Sedang | 60 |
-| Sedang + Susah | 65 |
-| 2 soal Susah | 70 |
-| 3 soal, kombinasi paling rendah (2 Mudah + 1 Sedang) | 80 |
-| 3 soal, kombinasi paling tinggi (2 Susah + 1 Sedang) | 100 |
+Contoh dengan soal selesai dan benar penuh:
 
-Dua soal tidak pernah mencapai 75, dan tiga soal yang benar penuh selalu 80 atau lebih. Tiga soal yang hanya benar sebagian bisa jatuh di bawah 75.
+| Soal selesai | P | Nilai akhir |
+|---|---|---|
+| 1 Susah | 40 | 40 |
+| 2 Mudah | 30 | 30 |
+| Mudah + Sedang | 45 | 45 |
+| Mudah + Susah | 55 | 55 |
+| 2 Sedang | 60 | 60 |
+| Sedang + Susah | 70 | 70 |
+| 2 Susah | 80 | 74 (batas dua soal) |
+| 2 Mudah + Sedang | 60 | 75 (batas bawah tiga soal) |
+| 2 Mudah + Susah | 70 | 75 (batas bawah tiga soal) |
+| Mudah + 2 Sedang | 75 | 75 |
+| Mudah + Sedang + Susah | 85 | 85 |
+| Mudah + 2 Susah | 95 | 95 |
+| 2 Sedang + Susah | 100 | 100 |
+| Sedang + 2 Susah | 110 | 100 |
+
+Soal yang hanya benar sebagian (skor di bawah 70) tidak dihitung selesai, tetapi poinnya tetap ikut dijumlahkan ke P.
 
 ## Indeks nilai
 
@@ -54,14 +64,14 @@ Batas indeks adalah usulan dan bisa disesuaikan dengan aturan dosen.
 
 | Soal | Tingkat | Bobot | Judul |
 |---|---|---|---|
-| 1 | Mudah | 25 | Kasir Toko |
-| 2 | Mudah | 25 | Kelulusan Ujian |
+| 1 | Mudah | 15 | Kasir Toko |
+| 2 | Mudah | 15 | Kelulusan Ujian |
 | 3 | Sedang | 30 | Diskon Member |
 | 4 | Sedang | 30 | Tiket Wahana |
-| 5 | Susah | 35 | Seleksi Beasiswa |
-| 6 | Susah | 35 | Simulasi ATM |
+| 5 | Susah | 40 | Seleksi Beasiswa |
+| 6 | Susah | 40 | Simulasi ATM |
 
-### Soal 1. Kasir Toko (Mudah, 25 poin)
+### Soal 1. Kasir Toko (Mudah, 15 poin)
 
 Kode solusi:
 
@@ -96,7 +106,7 @@ Rubrik (skor soal 0 sampai 100):
 | Format keluaran sesuai | 10 |
 | Total | 100 |
 
-Poin soal = skor / 100 x 25.
+Poin soal = skor / 100 x 15.
 
 Test case (baris masukan dipisah `/`):
 
@@ -107,7 +117,7 @@ Test case (baris masukan dipisah `/`):
 | 3 | 2500 / 4 / 12500 | Total: 12500 / Kembalian: 0 / Cukup: True |
 | 4 | 1000 / 1 / 3500 | Total: 3500 / Kembalian: 0 / Cukup: True |
 
-### Soal 2. Kelulusan Ujian (Mudah, 25 poin)
+### Soal 2. Kelulusan Ujian (Mudah, 15 poin)
 
 Kode solusi:
 
@@ -138,7 +148,7 @@ Rubrik (skor soal 0 sampai 100):
 | Satu desimal dan teks keluaran sesuai | 20 |
 | Total | 100 |
 
-Poin soal = skor / 100 x 25.
+Poin soal = skor / 100 x 15.
 
 Test case (baris masukan dipisah `/`):
 
@@ -259,7 +269,7 @@ Test case (baris masukan dipisah `/`):
 | 5 | -1 / t | Umur tidak valid |
 | 6 | 12 / t | Tarif: 20000 |
 
-### Soal 5. Seleksi Beasiswa (Susah, 35 poin)
+### Soal 5. Seleksi Beasiswa (Susah, 40 poin)
 
 Kode solusi:
 
@@ -309,7 +319,7 @@ Rubrik (skor soal 0 sampai 100):
 | Teks keluaran persis | 10 |
 | Total | 100 |
 
-Poin soal = skor / 100 x 35.
+Poin soal = skor / 100 x 40.
 
 Test case (baris masukan dipisah `/`):
 
@@ -324,7 +334,7 @@ Test case (baris masukan dipisah `/`):
 | 7 | 3.0 / 3000000 / y | Beasiswa 50% |
 | 8 | 3.4 / 6000001 / y | Tidak memenuhi syarat penghasilan |
 
-### Soal 6. Simulasi ATM (Susah, 35 poin)
+### Soal 6. Simulasi ATM (Susah, 40 poin)
 
 Kode solusi:
 
@@ -380,7 +390,7 @@ Rubrik (skor soal 0 sampai 100):
 | Teks keluaran persis | 15 |
 | Total | 100 |
 
-Poin soal = skor / 100 x 35.
+Poin soal = skor / 100 x 40.
 
 Test case (baris masukan dipisah `/`):
 

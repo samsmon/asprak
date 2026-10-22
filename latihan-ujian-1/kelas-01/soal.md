@@ -11,14 +11,26 @@ Materi: variabel, konstanta, operator (aritmatika, logika), tipe data; if-then-e
 
 ## Penilaian
 
-- Ada 6 soal dengan bobot menurut tingkat: Mudah 25 poin, Sedang 30 poin, Susah 35 poin.
+- Ada 6 soal dengan bobot menurut tingkat: Mudah 15 poin, Sedang 30 poin, Susah 40 poin.
 - Nilai akhir adalah jumlah poin dan paling tinggi 100.
-- Tiga soal yang benar sudah cukup untuk nilai aman (75 ke atas). Dua soal yang benar menghasilkan nilai di bawah 75.
+- Soal dihitung selesai bila sebagian besar benar, yaitu skor penilaiannya minimal 70 dari 100.
+- Tiga soal selesai atau lebih menjamin nilai aman, yaitu 75 ke atas. Bila hanya dua soal yang selesai, nilai paling tinggi 74.
 - Soal yang tidak dikerjakan boleh dikosongkan, tidak ada pengurangan poin.
+
+## Format pengumpulan (.ipynb)
+
+- Sel pertama berupa sel teks (Markdown) berisi nama lengkap, NIM, dan kelas.
+- Satu sel kode untuk satu soal, berurutan dari soal 1 sampai 6.
+- Baris pertama setiap sel kode adalah komentar label soal, misalnya `# Soal 3`.
+- Satu soal tidak dipecah ke beberapa sel, dan dua soal tidak digabung dalam satu sel.
+- Jawaban berupa program yang membaca `input()`. Nilai yang ditulis langsung ke kode tidak diterima, karena penilaian menjalankan kode dengan masukan lain.
+- Sel percobaan dan kode di luar jawaban dihapus, lalu notebook disimpan sebelum dikirim.
+- Nama berkas: `NIM_Nama Lengkap.ipynb`, misalnya `6703220051_Bakti Surya Atmaja.ipynb`.
+- Berkas diunggah ke folder Google Drive Kelas 01: https://drive.google.com/drive/folders/1S_W7l1h9ifaCXyCS60Nw-ly2c7cXLXfN?usp=drive_link
 
 ## Soal
 
-### Soal 1. Kasir Toko (Mudah, 25 poin)
+### Soal 1. Kasir Toko (Mudah, 15 poin)
 
 Topik: Variabel, konstanta, tipe data, operator aritmatika dan perbandingan
 
@@ -72,7 +84,7 @@ Kembalian: -6500
 Cukup: False
 ```
 
-### Soal 2. Kelulusan Ujian (Mudah, 25 poin)
+### Soal 2. Kelulusan Ujian (Mudah, 15 poin)
 
 Topik: Percabangan if-else, operator aritmatika
 
@@ -213,7 +225,7 @@ Keluaran 2:
 Umur tidak valid
 ```
 
-### Soal 5. Seleksi Beasiswa (Susah, 35 poin)
+### Soal 5. Seleksi Beasiswa (Susah, 40 poin)
 
 Topik: Percabangan bersarang, operator logika dan perbandingan, tipe data float
 
@@ -262,7 +274,7 @@ Keluaran 2:
 Syarat organisasi tidak terpenuhi
 ```
 
-### Soal 6. Simulasi ATM (Susah, 35 poin)
+### Soal 6. Simulasi ATM (Susah, 40 poin)
 
 Topik: Percabangan bersarang + match-case
 
@@ -321,14 +333,3 @@ Keluaran 2:
 ```
 Saldo tidak cukup
 ```
-
-## Format pengumpulan (.ipynb)
-
-- Sel pertama berupa sel teks (Markdown) berisi nama lengkap, NIM, dan kelas.
-- Satu sel kode untuk satu soal, berurutan dari soal 1 sampai 6.
-- Baris pertama setiap sel kode adalah komentar label soal, misalnya `# Soal 3`.
-- Satu soal tidak dipecah ke beberapa sel, dan dua soal tidak digabung dalam satu sel.
-- Jawaban berupa program yang membaca `input()`. Nilai yang ditulis langsung ke kode tidak diterima, karena penilaian menjalankan kode dengan masukan lain.
-- Sel percobaan dan kode di luar jawaban dihapus, lalu notebook disimpan sebelum dikirim.
-- Nama berkas: `NIM_Nama Lengkap.ipynb`, misalnya `6703220051_Bakti Surya Atmaja.ipynb`.
-- Berkas diunggah ke folder Google Drive Kelas 01: https://drive.google.com/drive/folders/1S_W7l1h9ifaCXyCS60Nw-ly2c7cXLXfN?usp=drive_link

@@ -11,14 +11,26 @@ Materi: variabel, konstanta, operator (aritmatika, logika), tipe data; if-then-e
 
 ## Penilaian
 
-- Ada 6 soal dengan bobot menurut tingkat: Mudah 25 poin, Sedang 30 poin, Susah 35 poin.
+- Ada 6 soal dengan bobot menurut tingkat: Mudah 15 poin, Sedang 30 poin, Susah 40 poin.
 - Nilai akhir adalah jumlah poin dan paling tinggi 100.
-- Tiga soal yang benar sudah cukup untuk nilai aman (75 ke atas). Dua soal yang benar menghasilkan nilai di bawah 75.
+- Soal dihitung selesai bila sebagian besar benar, yaitu skor penilaiannya minimal 70 dari 100.
+- Tiga soal selesai atau lebih menjamin nilai aman, yaitu 75 ke atas. Bila hanya dua soal yang selesai, nilai paling tinggi 74.
 - Soal yang tidak dikerjakan boleh dikosongkan, tidak ada pengurangan poin.
+
+## Format pengumpulan (.ipynb)
+
+- Sel pertama berupa sel teks (Markdown) berisi nama lengkap, NIM, dan kelas.
+- Satu sel kode untuk satu soal, berurutan dari soal 1 sampai 6.
+- Baris pertama setiap sel kode adalah komentar label soal, misalnya `# Soal 3`.
+- Satu soal tidak dipecah ke beberapa sel, dan dua soal tidak digabung dalam satu sel.
+- Jawaban berupa program yang membaca `input()`. Nilai yang ditulis langsung ke kode tidak diterima, karena penilaian menjalankan kode dengan masukan lain.
+- Sel percobaan dan kode di luar jawaban dihapus, lalu notebook disimpan sebelum dikirim.
+- Nama berkas: `NIM_Nama Lengkap.ipynb`, misalnya `6703220051_Bakti Surya Atmaja.ipynb`.
+- Berkas diunggah ke folder Google Drive Kelas 02: https://drive.google.com/drive/folders/18dHnI4B3LkzHQ41KBf6U56ozs1TE6hb7?usp=drive_link
 
 ## Soal
 
-### Soal 1. Konversi Durasi (Mudah, 25 poin)
+### Soal 1. Konversi Durasi (Mudah, 15 poin)
 
 Topik: Variabel, konstanta, operator aritmatika (// dan %), tipe data bool
 
@@ -64,7 +76,7 @@ Keluaran 2:
 Lebih dari 1 jam: False
 ```
 
-### Soal 2. Cek Suhu Tubuh (Mudah, 25 poin)
+### Soal 2. Cek Suhu Tubuh (Mudah, 15 poin)
 
 Topik: Percabangan if-elif-else, tipe data float
 
@@ -202,7 +214,7 @@ Keluaran 2:
 Bukan segitiga
 ```
 
-### Soal 5. Ongkos Kirim Paket (Susah, 35 poin)
+### Soal 5. Ongkos Kirim Paket (Susah, 40 poin)
 
 Topik: Percabangan bersarang, operator logika dan aritmatika
 
@@ -254,7 +266,7 @@ Keluaran 2:
 Ekspres tidak tersedia untuk internasional
 ```
 
-### Soal 6. Penilaian Lomba (Susah, 35 poin)
+### Soal 6. Penilaian Lomba (Susah, 40 poin)
 
 Topik: Percabangan bersarang + match-case
 
@@ -305,14 +317,3 @@ Keluaran 2:
 ```
 Jumlah anggota harus 3 sampai 5
 ```
-
-## Format pengumpulan (.ipynb)
-
-- Sel pertama berupa sel teks (Markdown) berisi nama lengkap, NIM, dan kelas.
-- Satu sel kode untuk satu soal, berurutan dari soal 1 sampai 6.
-- Baris pertama setiap sel kode adalah komentar label soal, misalnya `# Soal 3`.
-- Satu soal tidak dipecah ke beberapa sel, dan dua soal tidak digabung dalam satu sel.
-- Jawaban berupa program yang membaca `input()`. Nilai yang ditulis langsung ke kode tidak diterima, karena penilaian menjalankan kode dengan masukan lain.
-- Sel percobaan dan kode di luar jawaban dihapus, lalu notebook disimpan sebelum dikirim.
-- Nama berkas: `NIM_Nama Lengkap.ipynb`, misalnya `6703220051_Bakti Surya Atmaja.ipynb`.
-- Berkas diunggah ke folder Google Drive Kelas 02: https://drive.google.com/drive/folders/18dHnI4B3LkzHQ41KBf6U56ozs1TE6hb7?usp=drive_link
